@@ -67,7 +67,6 @@ example:
 % require further packages,
 % these are just some examples
 \usepackage{longtable}
-\usepackage[lite]{mtpro2}
 \usepackage{chemformula}
 \usepackage{longtable}
 \usepackage{ltxtable}
@@ -97,7 +96,6 @@ of these definitions:
 
 \Affil{1}{Institutional affiliation 1}
 \Affil{2}{Institutional affiliation 2}
-\Affil{3}{Institutional affiliation 3}
 
 % funding information, n.a. if none
 \funding{n.a.}
