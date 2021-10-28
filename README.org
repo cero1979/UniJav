@@ -1,22 +1,22 @@
 #+TITLE:UNIVERSITAS SCIENTIARUM article LaTeX template
 #+AUTHOR:Juan David Salcedo Hernández
 
-This document class conforms to the guidelines stipulated by Universitas
-Scientiarum for its submissions and publications.
+This document class conforms to the guidelines stipulated by /Universitas Scientiarum/
+for its submissions and publications.
 
-The recommended configuration for this template is:
+We recommended that this template be loaded with the following options:
 #+begin_src latex
 \documentclass[automatic-bibliography]{univsciauth}
 #+end_src
-Omit the ~automatic-bibliography~ option in case you want to manually manage your
-references; in which case we recommend that the (formatted) references be
-drawn up on an individual LaTeX file and included in the main file via the
-~\input{}~ command, as described in [[Bibliography management]].
+Omit the ~automatic-bibliography~ option if you want to manually manage your
+references, in which case the formatted references should be
+drawn up on an individual LaTeX file, and included in the main file via the
+~\input{}~ command as described in [[Bibliography management]].
 
 This class supports an additional boolean option, ~defaultmaths~, which is set
-to ~true~ by default and loads the xits maths font. If you wish to use another
-mathematical font, just set this option to ~false~, and load another font in
-your document preamble:
+to ~true~ by default and loads the ~xits~ maths font set. If you wish to use another
+mathematical font set, just set this option to ~false~ and load your preferred font package in
+the document preamble:
 #+begin_src latex
 \documentclass[defaultmaths=false]{univsciauth}
 #+end_src
@@ -30,31 +30,30 @@ your document preamble:
   - [[#bibliography-management][Bibliography management]]
 
 * Requirements
-Notice that the LaTeX installation process depends on your operating system of
-choice, hence you must check how to install all LaTeX packages in your
-particular case.
+The LaTeX installation process depends on your operating system of
+choice, so you must check how to install all LaTeX packages depending
+on your particular case.
 
-You will, of course, need any text editor supporting LaTeX, i.e., Vim, Emacs,
-Sublime Text, etc.
+You need a text editor supporting LaTeX, say Vim, Emacs, Sublime Text, etc.
 
-Notice that this template expects the ~KOMA-script~ bundle to be installed on
+This template expects the ~KOMA-script~ bundle to be installed on
 your system. This set of packages is included by default in both TeXLive and
 MikTeX.
 
-This template may be compiled with any of the standard LaTeX engines available:
-~pdfLaTeX~, ~XeLaTeX~, or ~LuaLaTeX~.
+Documents set up with this template may be compiled with any of the standard
+LaTeX engines available: ~pdfLaTeX~, ~XeLaTeX~, or ~LuaLaTeX~.
 
 * Usage
 To start using this template, you can simply add the class file to your LaTeX
-installation; this, too, depends on your operating system.
+installation directory; this, too, depends on your operating system.
 
 ** Document preamble
 The first thing we recommend is that you load any desired additional packages
 right after defining the document class; most of the often used packages for
 mathematical typesetting are included by default, but you may want to include
-additional ones for typesetting chemical formulas along with other purposes.
+additional ones.
 
-We strongly suggest that you use the ~siunitx~ pakcage for writing units, since
+We strongly suggest that you use the ~siunitx~ package for writing units, since
 it provides a straightforward set of macros for their standard formatting.
 You may want to read this package's [[https://ctan.org/pkg/siunitx?lang=en][documentation]].
 
@@ -77,9 +76,9 @@ example:
 #+end_src
 
 Once the packages are all set, you need to start formatting the document itself;
-for that purpose, you need to define titles, authors, affiliations, etc. You can
+you need to define titles, authors, affiliations, etc. You can
 define as many affiliations as desired, so long as they correlate to some
-author, the following example should give you an idea of the general structure
+author; the following example should give you an idea of the general structure
 of these definitions:
 #+begin_src latex
 \title{Your title}
@@ -108,8 +107,8 @@ of these definitions:
 #+end_src
 
 ** General document structure
-In order to begin writing your document, you are expected to follow a specific
-structure, viz., the one shown below:
+From here you could go on and write your document. You are expected to follow a specific
+structure that is shown below:
 #+begin_src latex
 \begin{document}
 \maketitle
@@ -150,12 +149,13 @@ As for tables, you may want to use the ~\input{}~ command:
 \end{table}
 #+end_src
 
-For both tables and figures cross-references, you should use either ~\autoref{tab:num}~ or ~\autoref{fig:ref}~.
+For cross-references to both tables and figures, you should use either
+~\autoref{tab:num}~ or ~\autoref{fig:ref}~.
 
 ** Bibliography management
 In general, it is desirable to have your references automatically formatted. You
-can achieve this by loading the class as it is recommended and drawing up a
-~bib~ file containging your references. You just need to specify this ~bib~ file
+can achieve this by loading the class as is recommended and drawing up a
+~bib~ file containing your references. You just need to specify this ~bib~ file
 in your preamble with the following command:
 #+begin_src latex
 \addbibresource{references.bib}
@@ -165,7 +165,7 @@ Then, at the end of your document, you can print your references with this comma
 \printbibliography
 #+end_src
 
-If you so desire, references may be manually formatted. In this case we suggest
+If you so desire, references could be manually formatted; in this case we suggest
 that you create a new individual file, say ~bibliography.tex~, which should be
 formatted as follows:
 #+begin_src latex

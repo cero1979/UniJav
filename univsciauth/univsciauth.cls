@@ -78,6 +78,9 @@
 		\setmathfont{XITSMath-Regular}[
 		Extension = .otf,
 		BoldFont = XITSMath-Bold]
+                \setmathfont[range={\sum, \prod, \coprod, \int},
+                             Scale=MatchUppercase
+                             ]{Latin Modern Math}
 	\else
 		\RequirePackage{amssymb}
 		\RequirePackage{mathtools}
