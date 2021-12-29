@@ -1,6 +1,6 @@
 % Provides univsci class
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesClass{univsciauth}[2021/04/25 Article class for Universitas Scientiarum]
+\ProvidesClass{univsci}[2021/04/25 Article class for Universitas Scientiarum]
 
 \RequirePackage{iftex,ifxetex,ifluatex}
 
@@ -54,8 +54,8 @@
 \RequirePackage{kvoptions}
 
 \DeclareStringOption[11pt]{fntsize}
-\ProcessKeyvalOptions{univsciauth}\relax
-\PassOptionsToClass{\univsciauth@fntsize}{article}
+\ProcessKeyvalOptions{univsci}\relax
+\PassOptionsToClass{\univsci@fntsize}{article}
 \DeclareOption*{\PassOptionsToClass{\CurrentOption}{article}}
 \ProcessOptions\relax
 \LoadClass{article}
@@ -329,7 +329,7 @@
 			\vspace{4mm}\par
 			\textbf{Electronic supplementary material:} \esmaterial\par
 			\hspace{10mm}
-			\includegraphics[width=24mm]{icons/Open_Access_PLoS}}
+			\includegraphics[width=24mm]{/home/juan/Personal/gitlab_repos/univsci-git/texmf/univsci/icons/Open_Access_PLoS.pdf}}
 		}
 	\end{tcolorbox}
 	\vspace*{-0.5cm}\small\begin{shaded*}
@@ -407,7 +407,8 @@
 \chead{
 	\raisebox{-2.5cm}[0pt][0pt]{%
 	\begin{tikzpicture}[remember picture]
-		\node (logo) [inner sep=0pt] at (-8.8,-0.5) {\includegraphics[height=21mm]{icons/Javeriana}};
+		\node (logo) [inner sep=0pt] at (-8.8,-0.5)
+                {\includegraphics[height=21mm]{/home/juan/Personal/gitlab_repos/univsci-git/texmf/univsci/icons/Javeriana.pdf}};
 		\draw [black] (-9.6,-1.44) -- (-9.1,-1.44);
 		\draw [thin, draw=mytitlecolor, fill=mytitlecolor] (6.2,-1.44) -- (10.2,-1.44) {[rounded corners=4pt] -- (10.2,-1.97) -- (6.2,-1.97)} -- cycle; 
 		\node at (8.2,-1.44)[below] {\color{white} \textbf{\fontsize{10.5}{12}\selectfont ORIGINAL ARTICLE}};
@@ -417,7 +418,7 @@
 	}
 }
   \ifoot{%
-	  \includegraphics[width=21mm]{icons/CC-BY_icon}
+	  \includegraphics[width=21mm]{/home/juan/Personal/gitlab_repos/univsci-git/texmf/univsci/icons/CC-BY_icon.pdf}
     }
   \ofoot{%
 	  \fontsize{6.5}{8}\selectfont \textit{Universitas Scientiarum}, Journal of the Faculty of Sciences, Pontificia Universidad Javeriana, is licensed under the Creative Commons Attribution 4.0 International Public License

@@ -37,7 +37,7 @@
       \strng{authornamehash}{ed61f3759c22a22c6fb7bb8d619ee33f}
       \strng{authorfullhash}{ed61f3759c22a22c6fb7bb8d619ee33f}
       \field{sortinit}{1}
-      \field{sortinithash}{50c6687d7fc80f50136d75228e3c59ba}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{Der barycentrische Calcul0: ein neues Hülfsmittel zur analytischen Behandlung der Geometrie}
@@ -62,7 +62,7 @@
       \strng{authorfullhash}{a455fd314684bf4694bd754d86a7a20b}
       \field{extraname}{1}
       \field{sortinit}{2}
-      \field{sortinithash}{ed39bb39cf854d5250e95b1c1f94f4ed}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{booktitle}{Conference on Applications of Numerical Analysis}
@@ -93,7 +93,7 @@
       \strng{authorfullhash}{a455fd314684bf4694bd754d86a7a20b}
       \field{extraname}{2}
       \field{sortinit}{3}
-      \field{sortinithash}{a37a8ef248a93c322189792c34fc68c9}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{IMA Journal of Applied Mathematics}
@@ -125,7 +125,7 @@
       \strng{authornamehash}{99a9191010918ddb41fd9af047aaf91e}
       \strng{authorfullhash}{99a9191010918ddb41fd9af047aaf91e}
       \field{sortinit}{4}
-      \field{sortinithash}{e071e0bcb44634fab398d68ad04e69f4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{Advances in Computational Mathematics}
@@ -159,7 +159,7 @@
       \strng{authornamehash}{7d8205c654bf30193db387e1d8746c1d}
       \strng{authorfullhash}{7d8205c654bf30193db387e1d8746c1d}
       \field{sortinit}{4}
-      \field{sortinithash}{e071e0bcb44634fab398d68ad04e69f4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{A rational finite element basis.}
@@ -187,7 +187,7 @@
       \strng{authorfullhash}{a129029ee26d59311ebacc318bdc7c01}
       \field{extraname}{3}
       \field{sortinit}{4}
-      \field{sortinithash}{e071e0bcb44634fab398d68ad04e69f4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{Rational bases and generalized barycentrics}
@@ -219,7 +219,7 @@
       \strng{authornamehash}{6341f702a11ea48a995a0586c83e3f88}
       \strng{authorfullhash}{6341f702a11ea48a995a0586c83e3f88}
       \field{sortinit}{5}
-      \field{sortinithash}{5dd416adbafacc8226114bc0202d5fdd}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{SIAM Journal on Numerical Analysis}
@@ -267,7 +267,7 @@
       \strng{authorfullhash}{7c537ce660ed7d723dbd73dfb68bd7e9}
       \field{extraname}{1}
       \field{sortinit}{5}
-      \field{sortinithash}{5dd416adbafacc8226114bc0202d5fdd}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{Journal of graphics tools}
@@ -299,7 +299,7 @@
       \strng{authornamehash}{78a3862e121a26783efe7eced23e34e1}
       \strng{authorfullhash}{78a3862e121a26783efe7eced23e34e1}
       \field{sortinit}{5}
-      \field{sortinithash}{5dd416adbafacc8226114bc0202d5fdd}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{Computer aided geometric design}
@@ -337,7 +337,7 @@
       \strng{authorfullhash}{9ab9c6624a787c2cce43b865120c0b48}
       \field{extraname}{1}
       \field{sortinit}{5}
-      \field{sortinithash}{5dd416adbafacc8226114bc0202d5fdd}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{International Journal for Numerical Methods in Engineering}
@@ -369,7 +369,7 @@
       \strng{authornamehash}{8f7238400635d3c99e0df7792b32646b}
       \strng{authorfullhash}{8f7238400635d3c99e0df7792b32646b}
       \field{sortinit}{5}
-      \field{sortinithash}{5dd416adbafacc8226114bc0202d5fdd}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{International journal for numerical methods in engineering}
@@ -411,7 +411,7 @@
       \strng{authornamehash}{d2ef88a2517245bacdb69a9b24ac0251}
       \strng{authorfullhash}{d2ef88a2517245bacdb69a9b24ac0251}
       \field{sortinit}{5}
-      \field{sortinithash}{5dd416adbafacc8226114bc0202d5fdd}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{Computer Aided Geometric Design}
@@ -459,7 +459,7 @@
       \strng{authorfullhash}{7c537ce660ed7d723dbd73dfb68bd7e9}
       \field{extraname}{2}
       \field{sortinit}{6}
-      \field{sortinithash}{7851c86048328b027313775d8fbd2131}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{Journal of graphics tools}
@@ -492,7 +492,7 @@
       \strng{authorfullhash}{2a7c39eead54d95437f163fad58278e9}
       \field{extraname}{1}
       \field{sortinit}{7}
-      \field{sortinithash}{f615fb9c6fba11c6f962fb3fd599810e}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{Journal of Aerospace Engineering}
@@ -525,7 +525,7 @@
       \strng{authorfullhash}{2a7c39eead54d95437f163fad58278e9}
       \field{extraname}{2}
       \field{sortinit}{8}
-      \field{sortinithash}{1b24cab5087933ef0826a7cd3b99e994}
+      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{Journal of Aerospace Engineering}
@@ -563,7 +563,7 @@
       \strng{authorfullhash}{9ab9c6624a787c2cce43b865120c0b48}
       \field{extraname}{2}
       \field{sortinit}{9}
-      \field{sortinithash}{54047ffb55bdefa0694bbd554c1b11a0}
+      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{International Journal of Solids and Structures}
@@ -600,7 +600,7 @@
       \strng{authornamehash}{6d3a31e7ddb1770568ca84c1d3515f9c}
       \strng{authorfullhash}{6d3a31e7ddb1770568ca84c1d3515f9c}
       \field{sortinit}{1}
-      \field{sortinithash}{50c6687d7fc80f50136d75228e3c59ba}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{Generalized barycentric coordinates in computer graphics and computational mechanics}
@@ -632,7 +632,7 @@
       \strng{authornamehash}{5ea544ee19f77e8be9b8ba8cab393266}
       \strng{authorfullhash}{5ea544ee19f77e8be9b8ba8cab393266}
       \field{sortinit}{1}
-      \field{sortinithash}{50c6687d7fc80f50136d75228e3c59ba}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{Triangulations and applications}
@@ -660,7 +660,7 @@
       \strng{authorfullhash}{2a7c39eead54d95437f163fad58278e9}
       \field{extraname}{3}
       \field{sortinit}{2}
-      \field{sortinithash}{ed39bb39cf854d5250e95b1c1f94f4ed}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{Finite Element Concepts}

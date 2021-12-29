@@ -1,5 +1,6 @@
+% TeX program = lualatex
 % Define the document class
-\documentclass[automatic-bibliography, defaultmaths=false]{univsciauth}
+\documentclass[automatic-bibliography, defaultmaths=false]{univsci}
 
 % Load some extra packages
 \usepackage{multirow}
@@ -8,19 +9,15 @@
 
 % Custom maths font,
 % see https://ctan.org/pkg/mtp2lite
-\usepackage[lite,subscriptcorrection,nofontinfo]{mtpro2}
-
-% mtpro2 font corrections
-\DeclareMathSymbol{0}{\mathalpha}{operators}{`0}
-\DeclareMathSymbol{1}{\mathalpha}{operators}{`1}
-\DeclareMathSymbol{2}{\mathalpha}{operators}{`2}
-\DeclareMathSymbol{3}{\mathalpha}{operators}{`3}
-\DeclareMathSymbol{4}{\mathalpha}{operators}{`4}
-\DeclareMathSymbol{5}{\mathalpha}{operators}{`5}
-\DeclareMathSymbol{6}{\mathalpha}{operators}{`6}
-\DeclareMathSymbol{7}{\mathalpha}{operators}{`7}
-\DeclareMathSymbol{8}{\mathalpha}{operators}{`8}
-\DeclareMathSymbol{9}{\mathalpha}{operators}{`9}
+\let\Bbbk\relax
+\usepackage[%
+nofontinfo,
+subscriptcorrection,
+zswash,
+mtphrd,
+mtpfrak,
+mtpcal
+]{mtpro2}
 
 % corrections for mtpro2 under LuaTeX
 \ifluatex
