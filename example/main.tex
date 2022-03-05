@@ -1,13 +1,15 @@
-% Define the document class
-\documentclass[automatic-bibliography]{univsciauth}
+% TeX program = lualatex
+% Specify path to the preamble file
+\input{../unvisci-preamble.tex}
 
 % Load some extra packages
-\usepackage{multirow}
-\usepackage{longtable}
 \usepackage{siunitx}
+\usepackage{amsmath}
+\usepackage{mathtools}
+\RequirePackage[font=small,labelformat=parens,labelsep=space]{subcaption}
 
 % Define the references file
-\addbibresource{references.bib}
+\addbibresource{./references.bib}
 
 % Document specific configs
 \title{Extension of Dasgupta's Technique for Higher Degree Approximation}
@@ -16,22 +18,15 @@
 \author[1]{P. L. Powar}
 \author[1]{Rishabh Tiwari}
 \author[2]{Vishnu Narayan Mishra*}
-\authormail{vishnunarayanmishra@gmail.com}
-\shortauthor{Powar et al.}
+%\authormail{vishnunarayanmishra@gmail.com}
 
 \Affil{1}{Department of Mathematics and Computer Science, R.D. University, Jabalpur, 482001, (M.P.), India.}
 \Affil{2}{Department of Mathematics, Indira Gandhi National Tribal University, Lalpur, Amarkantak, Anuppur, Madhya Pradesh 484 887, India.}
 
-\funding{n.a.}
-\esmaterial{Supp. 1}
-
-\doi{10.11144/Javeriana.SC26-2.eodt}
-
 % Start writing your document
 \begin{document}
-% \setcounter{page}{139}
+
 \maketitle
-\thispagestyle{firstpage}
 
 \begin{abstract}
 In the present paper, rational wedge functions for degree two approximation have
@@ -49,7 +44,7 @@ construction of Wachspress coordinates for linear approximation is extended to
 obtain the coordinates for quadratic approximation. The assertions have been
 supported by considering some illustrative examples.
 
-\keywords{Adjoint; invariance; pentagonal discretization; wedge functions.}
+\textbf{Keywords:} Adjoint; invariance; pentagonal discretization; wedge functions.
 \end{abstract}
 
 \section{Introduction}
@@ -96,7 +91,7 @@ polygons of order $m$ in a degree $k$ approximation are of the form
 \begin{equation}
   \frac{P^{m+k-3}(x,y)}{P^{m-3}(x,y)} \label{eqn111}
 \end{equation}
-where $P^n(x,y)$ denotes a bivariate polynomial of degree $n$. It has been
+where $P^n(x,y)$ denotes a bivariate polynomial of degree  $n$. It has been
 identified in~\cite{das} that the adjoint is nothing but the sum of numerators
 of the wedge functions, having coefficients of terms of higher degree (higher
 than $m-3$, cf. \autoref{eqn111}) equated to zero.
@@ -665,87 +660,5 @@ affiliations, knowledge or beliefs) in the subject matter or materials discussed
 in this manuscript. The authors declare that there are no conflicts of interest.
 
 \printbibliography
-
-\clearpage
-
-\begin{shaded*}
-  {\fontsize{11}{10}\selectfont\textbf{\textcolor{myseccolor}{Extensión de la Técnica de Dasgupta para Aproximación de Grado Superior}}}
-
-  \vspace{3mm}
-
-  {\fontsize{11}{10}\selectfont\textbf{\textcolor{myseccolor}{Resumen:}}}
-  En el presente artículo, se calculan funciones racionales para aproximación de grado dos sobre una
-  discretización pentagonal del dominio, utilizando un enfoque analítico que es una extensión del enfoque
-  de Dasgupta para la aproximación lineal. Esta técnica permite evitar el cálculo de los puntos de
-  intersección exteriores de los elementos, que es un componente clave de la técnica iniciada por
-  Wachspress. La condición necesaria para la existencia de la función del denominador fue establecida por
-  Wachspress mientras que nuestra afirmación, inducida por la técnica de Dasgupta, asegura la suficiencia
-  de la existencia. Considerando las funciones adjuntas (denominador) para aproximación lineal obtenidas
-  por Dasgupta, se establece la invariancia del adjunto para la aproximación de grado dos. En otras
-  palabras, el método propuesto por Dasgupta para la construcción de coordenadas de Wachspress para
-  aproximación lineal se amplía para obtener las coordenadas para aproximación cuadrática. Las
-  afirmaciones se sustentan considerando algunos ejemplos ilustrativos.
-
-  {\fontsize{11}{10}\selectfont\textbf{\textcolor{myseccolor}{Palabras Clave:}}}
-  Adjunto; invarianza; discretización pentagonal; funciones tipo cuña.
-\end{shaded*}
-
-\begin{shaded*}
-  {\fontsize{11}{10}\selectfont\textbf{\textcolor{myseccolor}{Extensão da Técnica de Dasgupta para Aproximação de Grau Superior}}}
-
-  \vspace{3mm}
-
-  {\fontsize{11}{10}\selectfont\textbf{\textcolor{myseccolor}{Resumo:}}}
-  No presente artigo, funções racionais para aproximação de grau dois são calculadas sobre uma
-  discretização pentagonal do domínio, usando uma abordagem analítica que é uma extensão da
-  abordagem de Dasgupta para aproximação linear. Esta técnica permite evitar o cálculo dos pontos de
-  intersecção exteriores dos elementos, componente chave da técnica iniciada pelo Wachspress. A
-  condição necessária para a existência da função denominadora foi estabelecida por Wachspress
-  enquanto nossa assertiva, induzida pela técnica de Dasgupta, assegura a suficiência da existência.
-  Considerando as funções adjuntas (denominador) para aproximação linear obtidas por Dasgupta, a
-  invariância da adjunta para aproximação de grau dois é estabelecida. Em outras palavras, o método
-  proposto por Dasgupta para a construção de coordenadas Wachspress para aproximação linear é
-  estendido para obter as coordenadas para aproximação quadrática. As afirmações são apoiadas
-  considerando alguns exemplos ilustrativos.
-
-  {\fontsize{11}{10}\selectfont\textbf{\textcolor{myseccolor}{Palavras-chave:}}}
-  Adjunto; invariância; discretização pentagonal; funções de cunha.
-\end{shaded*}
-\clearpage
-
-\begin{shaded*}
-  {\fontsize{11}{10}\selectfont\textbf{\textcolor{myseccolor}{P. L. Powar}}}
-
-  Professor P. L. Powar (Retd.) received her M.Sc. and Ph.D. in Mathematics form Rani Durgavati
-  University, Jabalpur, India. Her research areas are Cutting Stock Problem, Spline Approximation Theory,
-  Finite Element Methods, Fixed Point Theory, Topology and Software Engineering.
-
-  ORCID: \href{https://orcid.org/0000-0002-6332-9386}{0000-0002-6332-9386}
-\end{shaded*}
-
-\vspace{5mm}
-\begin{shaded*}
-  {\fontsize{11}{10}\selectfont\textbf{\textcolor{myseccolor}{Rishabh Tiwari}}}
-
-  Rishabh Tiwari is currently working in the Department of Mathematics, Rani Durgavati University,
-  Jabalpur, India. He has received M. Sc., M. Phil and Ph. D. in Mathematics from Rani Durgavati University,
-  Jabalpur, India. His research areas are, Algebraic Topology, Finite Element Methods and Topology.
-
-  ORCID: \href{https://orcid.org/0000-0001-7097-9777}{0000-0001-7097-9777}
-\end{shaded*}
-
-\vspace{5mm}
-\begin{shaded*}
-  {\fontsize{11}{10}\selectfont\textbf{\textcolor{myseccolor}{Vishnu Narayan Mishra}}}
-
-  Dr. Vishnu Narayan Mishra is working as Professor and Head of Department of Mathematics at Indira
-  Gandhi National Tribal University, Lalpur, Amarkantak, Madhya Pradesh, India. Prior to this, he also held as
-  academic positions as Assoc. Prof. at IGNTU, Amarkanta, Assistant Professor in AMHD, SVNIT, Surat. He
-  received the Ph.D. degree in Mathematics from Indian Institute of Technology, Roorkee in 2007. His
-  research interests are in the areas of pure and applied mathematics including Approximation Theory,
-  Nonlinear analysis and Optimization etc.
-
-  ORCID: \href{https://orcid.org/0000-0002-2159-7710}{0000-0002-2159-7710}
-\end{shaded*}
 
 \end{document}

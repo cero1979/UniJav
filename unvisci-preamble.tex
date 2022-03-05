@@ -1,0 +1,222 @@
+\documentclass[a4paper]{article}
+\usepackage{iftex,ifxetex,ifluatex}
+\usepackage{etoolbox}
+\usepackage{letltxmacro}
+\usepackage{xparse}
+\usepackage{xstring}
+
+\newif\ifxetexorluatex
+\ifxetex
+    \xetexorluatextrue
+\else
+    \ifluatex
+        \xetexorluatextrue
+    \else
+        \xetexorluatexfalse
+    \fi
+\fi
+
+\ifxetexorluatex
+    \usepackage[luatexrenderer=Node]{polyglossia} % for language settings
+    \setdefaultlanguage{english}
+
+    \usepackage{fontspec}
+    \usepackage{unicode-math}
+    \defaultfontfeatures[\rmfamily,\sffamily]{Ligatures=TeX}
+    \setmainfont{Latin Modern Roman}
+    \setmathfont{Latin Modern Math}
+\else
+    \usepackage[utf8]{inputenc}
+    \usepackage{lmodern} % standard times font
+    \usepackage[T1]{fontenc}
+
+    \usepackage[english]{babel} % for language settings
+    \usepackage{amssymb}
+
+    \DeclareUnicodeCharacter{202F}{\,}
+\fi
+
+\usepackage{color}
+\usepackage{tikz}
+\usetikzlibrary{calc}
+\usepackage{multirow, tabularx}
+\usepackage[tracking=smallcaps]{microtype}
+\usepackage[hypertexnames=false, hidelinks]{hyperref}
+
+% Abstract environment
+\makeatletter
+\renewenvironment{abstract}[1][]{
+        \begin{tikzpicture}
+                \node (body) [
+                        text justified,
+                        text width=\textwidth,
+                        inner sep=0pt,
+                        ] \bgroup
+                        %\begin{minipage}{<some width>}
+                        }{%
+                        %\end{minipage}
+                        \egroup;
+                \draw [
+                        line width=0.4pt,
+                        ]
+                        ($(body.south east)+(0pt,-5pt)$) -- ($(body.south west)+(0pt,-5pt)$)
+                        ($(body.north east)+(0pt,10pt)$) -- ($(body.north west)+(0pt,10pt)$);
+                \node [fill=white] at ($(body.north)+(0pt,10pt)$)
+                        {{\rmfamily\bfseries Abstract}};
+        \end{tikzpicture}
+}
+
+\newtoggle{@IsFirstEntryInList}
+
+\newcommand*{\@ShowContact}[1]{%
+    \iftoggle{@IsFirstEntryInList}{%
+        \global\togglefalse{@IsFirstEntryInList}%
+    }{%
+        \medskip % separator between entries
+    }%
+    \ShowContact{#1}%
+}
+\newcommand*{\ShowContact}[1]{%
+    \par\noindent\textbf{\csuse{number #1}}%
+    . \noindent\textrm{\csuse{univ #1}}%
+}%
+\newcommand*{\listcontacts}{% Initialize
+    \global\toggletrue{@IsFirstEntryInList}%
+}
+\newcommand{\AddToListOfContacts}[1]{%
+    \g@addto@macro\listcontacts{{#1}}%
+}
+
+\newcommand{\Affil}[2]{%
+    \ifcsdef{name #1}{%
+        \PackageError{\jobname}{Multiple uses of the key: '#1'}{}%
+    }{%
+        \csdef{number #1}{#1}%
+        \csdef{univ #1}{#2}%
+        \AddToListOfContacts{\unexpanded{\@ShowContact{#1}}\par}%
+    }%
+}
+
+\newcommand{\ABAuthorNames}{\showauthorlist}
+
+\def\shorttitle#1{\protected@xdef\shorttitle{#1}}
+
+\ExplSyntaxOn
+\clist_new:N \l_author_list
+\newcommand{\storeauthorname}[1]{
+\clist_put_right:Nn \l_author_list {#1}}
+\newcommand{\showauthorlist}{
+\clist_use:Nnnn \l_author_list {\,\&\,} {\,\&\,} {\,\&\,}}
+\ExplSyntaxOff
+
+\LetLtxMacro\AB@@author\author
+\def\AB@authornames{}
+\renewcommand{\author}[2][]{\AB@@author[#1]{#2}
+\storeauthorname{#2}}
+\makeatother
+
+% Modify article maketitle defaults
+\usepackage{titling}
+\usepackage{changepage}
+
+\pretitle{\begin{center}\bfseries\fontsize{22}{24}\selectfont}
+\posttitle{\end{center}\vspace{10bp}}
+\preauthor{\begin{center}\bfseries\fontsize{14}{15}\selectfont}
+\postauthor{\par\end{center}\listcontacts}
+\date{\vspace{-5ex}}
+
+% Modify author info
+\usepackage{authblk}
+\usepackage{floatrow}
+
+\AtBeginDocument{\affil[ ]{\mbox{ }}}
+\setcounter{Maxaffil}{0}
+\renewcommand\Authfont{\bfseries}
+\renewcommand\Affilfont{\normalfont\footnotesize}
+\renewcommand\Authsep{, }
+\renewcommand\Authand{, }
+\renewcommand\Authands{, }
+
+% bibliography management
+	\usepackage[sorting=none, abbreviate=false, giveninits=true, terseinits=true, maxbibnames=99, sortcites=true, citestyle=numeric-comp]{biblatex}
+
+	\renewbibmacro{in:}{}
+	\setlength{\bibitemsep}{5pt}
+	\setlength{\biblabelsep}{4pt}
+
+	\renewcommand*{\revsdnamepunct}{}
+	\renewcommand*{\bibpagespunct}{\addcolon}
+
+	\DeclareFieldFormat[article, inproceedings, book]{title}{#1}
+	\DeclareFieldFormat{pages}{\,#1,}
+	\DeclareFieldFormat{journaltitle}{\textit{#1}.}
+	\DeclareFieldFormat[inproceedings, book]{volume}{#1}
+	\DeclareFieldFormat{doi}{\vspace{5pt}\par
+	\textrm{doi}\addcolon\space\ifhyperref
+	{\href{#1}{\nolinkurl{#1}}}{\nolinkurl{#1}}}
+	\DeclareFieldFormat{url}{\textrm{url}\addcolon\space\ifhyperref
+	{\href{#1}{\nolinkurl{#1}}}{\nolinkurl{#1}}}
+
+	\DeclareNameAlias{default}{family-given}
+	\renewcommand{\UrlFont}{\normalfont}
+
+	\newtoggle{bbx:datemissing}
+	\renewbibmacro*{date}{\toggletrue{bbx:datemissing}}
+	\renewbibmacro*{issue+date}{\toggletrue{bbx:datemissing}\iffieldundef{issue}{}
+	{\printtext[parens]{\printfield{issue}}}\newunit}
+	\newbibmacro*{date:print}{\togglefalse{bbx:datemissing}\printdate}
+	\renewbibmacro*{chapter+pages}{\printfield{chapter}
+	\setunit{\bibpagespunct}\printfield{pages}\newunit
+	\usebibmacro{date:print}\newunit}
+	\renewbibmacro*{note+pages}{\printfield{note}\setunit{\bibpagespunct}
+	\printfield{pages}\newunit\usebibmacro{date:print}\newunit}
+	\renewbibmacro*{addendum+pubstate}{\iftoggle{bbx:datemissing}
+                {\usebibmacro{date:print}}{}\printfield{addendum}\newunit\newblock\printfield{pubstate}}
+
+\usepackage[heightrounded,
+top=24mm,
+left=2.5cm,
+right=2cm,
+bottom=22mm,
+]{geometry}
+
+% Theorems
+\usepackage{amsthm}
+%\numberwithin{equation}{section}
+
+\newtheorem{lemma}{Lemma}[section]
+\theoremstyle{definition}
+\newtheorem{theorem}[lemma]{Theorem}
+\theoremstyle{definition}
+\newtheorem{corollary}[lemma]{Corollary}
+\theoremstyle{definition}
+\newtheorem{proposition}[lemma]{Proposition}
+\theoremstyle{definition}
+\newtheorem{example}[lemma]{Example}
+\theoremstyle{definition}
+\newtheorem{definition}[lemma]{Definition}
+\theoremstyle{definition}
+\newtheorem{remark}[lemma]{Remark}
+\theoremstyle{definition}
+
+\begingroup
+\makeatletter
+\@for\theoremstyle:=definition,remark,plain\do{
+\expandafter\g@addto@macro\csname th@\theoremstyle\endcsname{
+\addtolength\thm@preskip\parskip}}
+\endgroup
+
+% Header style
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhead{}
+\lhead{\textbf{\thepage}}
+\rhead{\shorttitle}
+\cfoot{}
+
+% Some spacement adjustment 
+\setlength{\parindent}{0mm}
+\setlength{\parskip}{8pt}
+\setlength{\columnsep}{10mm}
+\widowpenalties 3 10000 10000 0
+\clubpenalties 3 10000 10000 0
